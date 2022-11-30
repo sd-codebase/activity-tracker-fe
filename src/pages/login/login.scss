@@ -1,0 +1,13 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .login-form {
+        width: 20rem;
+
+        .link {
+            cursor: pointer;
+        }
+    }
+}

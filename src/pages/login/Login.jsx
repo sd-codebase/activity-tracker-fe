@@ -61,7 +61,7 @@ const Login = ({setIsAuthorized, setIsAdmin}) => {
   return (
     <Container>
       <Header as='h2' icon textAlign='center'>
-        <Icon name='heartbeat' circular />
+        <Icon name='heartbeat' color='teal' circular />
         <Header.Content>Activity Tracker</Header.Content>
       </Header>
       <div className="login-container">

@@ -14,6 +14,9 @@ import Register from "./pages/register/Register";
 import AdminLayout from "./pages/admin/layout/AdminLayout";
 import AdminDashboard from "./pages/admin/dashboard/Dashboard";
 import AdminSettings from "./pages/admin/settings/Settings";
+import Uom from './pages/admin/uoms/Uom';
+import Options from './pages/admin/options/Options';
+import Forms from './pages/admin/forms/Forms';
 
 import UserLayout from "./pages/user/layout/UserLayout";
 import UserDashboard from "./pages/user/dashboard/UserDashboard";
@@ -21,6 +24,7 @@ import RecordActivity from "./pages/user/record-activity/RecordActivity";
 import SeeActivities from "./pages/user/see-activities/SeeActivities";
 import ViewActivity from "./pages/user/view-activity/ViewActivity";
 import UserSettings from "./pages/user/settings/UserSettings";
+
 
 function getToken() {
   const token = localStorage.getItem('token');
@@ -63,6 +67,9 @@ function App() {
         </Route>
         <Route path="/admin" element={isAdmin ? <AdminLayout /> : <Navigate to="/user" replace={true} />}>
           <Route index element={<AdminDashboard />} />
+          <Route path='/admin/uoms' element={<Uom />} />
+          <Route path='/admin/options' element={<Options />} />
+          <Route path='/admin/forms' element={<Forms />} />
           <Route path='/admin/settings' element={<AdminSettings />} />
           <Route path='/admin/*' element={<NotFound/>}></Route>
         </Route>

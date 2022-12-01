@@ -2,7 +2,7 @@ import React from 'react'
 import { StorageService } from '../../services/storage.service';
 import { useNavigate } from "react-router-dom";
 
-const Logout = () => {
+const Logout = ({children}) => {
     const navigate = useNavigate();
   const exitApp = () => {
     StorageService.removeItem('token');
@@ -11,7 +11,9 @@ const Logout = () => {
   }
   return (
     <>
-        <div onClick={exitApp}>Logout</div>
+        <div onClick={exitApp}>
+          {children}
+        </div>
     </>
   )
 };
